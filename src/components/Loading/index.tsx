@@ -1,8 +1,12 @@
-import styled from "styled-components/native";
+import { Text } from "react-native";
+import { Container, LoadIndicator } from "./styled";
 
-export const Container = styled.View`
-  flex: 1;
-  justify-content : center;
-  align-items: center;
+function Loading() {
+    return (
+        <Container>
+            <LoadIndicator />
+        </Container>
+    );
+}
 
-`;
+export default Loading;
