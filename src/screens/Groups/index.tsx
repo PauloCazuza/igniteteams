@@ -5,6 +5,7 @@ import Header from "@components/Header";
 import HighLight from "@components/Highlight";
 import { Container } from "./styles";
 import ListEmpty from "@components/ListEmpty";
+import Button from "@components/Button";
 
 export default function Groups() {
     const [groups, setGroups] = useState<string[]>([]);
@@ -30,6 +31,8 @@ export default function Groups() {
                     />
                 )}
             />
+
+            <Button title="Criar nova turma" />
         </Container>
     );
 }
