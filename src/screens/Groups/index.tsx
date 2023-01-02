@@ -4,9 +4,10 @@ import GroupCard from "@components/GroupCard";
 import Header from "@components/Header";
 import HighLight from "@components/Highlight";
 import { Container } from "./styles";
+import ListEmpty from "@components/ListEmpty";
 
 export default function Groups() {
-    const [groups, setGroups] = useState<string[]>(["Galera da Rocket", "Amigos"]);
+    const [groups, setGroups] = useState<string[]>([]);
 
     return (
         <Container>
@@ -20,6 +21,11 @@ export default function Groups() {
                 renderItem={({ item }) => (
                     <GroupCard
                         title={item}
+                    />
+                )}
+                ListEmptyComponent={() => (
+                    <ListEmpty
+                        message="Que tal cadastrar um grupo ?"
                     />
                 )}
             />
