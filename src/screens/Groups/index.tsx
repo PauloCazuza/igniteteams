@@ -23,6 +23,7 @@ export default function Groups() {
                         title={item}
                     />
                 )}
+                contentContainerStyle={groups.length === 0 && { flex: 1 }}
                 ListEmptyComponent={() => (
                     <ListEmpty
                         message="Que tal cadastrar um grupo ?"
