@@ -1,4 +1,5 @@
 import ButtonIcon from "@components/ButtonIcon";
+import Filter from "@components/Filter";
 import Header from "@components/Header";
 import HighLight from "@components/Highlight";
 import Input from "@components/Inputs";
@@ -25,7 +26,10 @@ function Players() {
                 />
             </Form>
 
-
+            <Filter
+                title="Time A"
+                isActive
+            />
         </Container>
     );
 }
