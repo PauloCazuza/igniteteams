@@ -18,7 +18,7 @@ function AppRoutes() {
                 component={NewGroup}
             />
             <Screen
-                name="player"
+                name="players"
                 component={Players}
             />
         </Navigator>
