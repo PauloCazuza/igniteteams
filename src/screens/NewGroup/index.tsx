@@ -6,12 +6,14 @@ import Header from "@components/Header";
 import HighLight from "@components/Highlight";
 import Input from "@components/Inputs";
 import { useNavigation } from "@react-navigation/native";
+import { groupCreate } from "@storage/group/groupsCreate";
 
 function NewGroup() {
     const [group, setGroup] = useState<string>("");
     const navigation = useNavigation();
 
-    function handleNew() {
+    async function handleNew() {
+        await groupCreate(group)
         navigation.navigate("players", { group });
     }
 
